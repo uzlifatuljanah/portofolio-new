@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="stars"></div>
+<div class="glow1"></div>
+<div class="glow2"></div>
+<div class="glow-center"></div>
+
+<header>
+    <nav class="navbar">
+      <h1 class="logo">PORTOFOLIO</h1>
+      <ul class="menu">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#karya">Karya</a></li>
+        <li><a href="#tujuan">Tujuan</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="beranda" class="hero">
+
+    <img src="frofile.png" width="120" height="120" alt="Foto Profil" class="profile">
+    <h3>UZLIFATUL JANAH</h3>
+    <p class="deskripsi">
+     Halo, saya Uzlifatul Janah, Siswi kelas 10 SRMA 24 Kediri yang memiliki minat di bidang jurnalistik dan kreativitas digital. 
+     Saya senang mempelajari hal baru dan terus mengembangkan kemampuan diri. 
+     Website ini dibuat untuk menampilkan profil, kemampuan, dan beberapa karya saya selama proses belajar.
+    </p>
+    <div class="info-box">
+      <p><span>Cita-cita:</span> Chef</p>
+      <p><span>Hobi:</span> Membaca, Menulis, Memasak, Lari</p>
+      <p><span>Pengalaman:</span> Membuat desain dan konten kreatif untuk tugas sekolah.
+        Memiliki pengalaman dasar di bidang jurnalistik dan penulisan.
+        Mengembangkan kemampuan desain digital dan editing sederhana.
+     </p>
+    </div>
+  </section>
+  
+  <section id="karya" class="karya-section" style="padding: 40px;">
+    <h3 style="padding: 40px;">Karya-Karya</h3><br>
+    <div class="karya-container">
+      <div class="card">
+        <img src="karya1.png" alt="Karya 1">
+        <p>Desain website sekolah sederhana dengan tampilan modern, HTML dan CSS untuk melatih membuat web.</p>
+      </div>
+      <div class="card">
+        <img src="karya2.png" alt="Karya 2">
+        <p>Ilustrasi digital bertema belajar malam yang dibuat untuk melatih kreativitas dan kemampuan desain digital.</p>
+      </div>
+      <div class="card">
+        <img src="karya3.png" alt="Karya 3">
+        <p>Poster digital bertema motivasi belajar dengan kombinasi teks dan gambar yang menarik dan mudah dipahami.
+      </div>
+    </div>
+  </section>
+  <section id="tujuan" class="tujuan-section">
+
+    <div class="tujuan-box">
+      <h3>Tujuan</h3>
+
+      <p>Saya ingin terus berkembang dan menghasilkan karya yang bermanfaat.</p>
+
+      <p>Saya bercita-cita menjadi pribadi yang memberikan dampak positif.</p>
+
+      <p>Saya akan terus belajar dan tidak mudah menyerah.</p>
+    </div>
+
+    <div class="kontak-box">
+      <p>Instagram: @jzlafree</p>
+      <p>WhatsApp: 085608244112</p>
+      <p>Email: @liaulfianti.gmail.com</p>
+    </div>
+
+  </section>
+</body>
+</html>
+<div class="popup-image" id="popup">
+
+  <span onclick="tutupPopup()">&times;</span>
+
+  <img id="popup-img" src="" alt="Preview">
+
+</div>
+
+<script>
+const gambar = document.querySelectorAll(".card img");
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+
+gambar.forEach(img => {
+  img.addEventListener("click", function () {
+    popup.style.display = "flex";
+    popupImg.src = this.src;
+  });
+});
+
+function tutupPopup() {
+  popup.style.display = "none";
+}
+</script>
